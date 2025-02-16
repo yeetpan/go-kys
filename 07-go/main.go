@@ -3,16 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	// suppose i want to pass a value through a function
-	// if i pass directly a copy will be sent
-	// to ensure that does not occur we use pointers.
+	var fruitList [4]string
+	fruitList[0] = "a"
+	fruitList[1] = "p"
+	fruitList[3] = "e"
 
-	// var ptr *int
-	// fmt.Println("Value of Pointer is ", ptr)
+	fmt.Println("Fruit list is :", fruitList)
+	fmt.Println("Fruit list is", len(fruitList))
 
-	myNumber := 23
-
-	var ptr = &myNumber
-	*ptr = 223
-	fmt.Println(myNumber)
+	var vegList = [3]string{"p", "n", "e"}
+	fmt.Println(len(vegList))
 }
